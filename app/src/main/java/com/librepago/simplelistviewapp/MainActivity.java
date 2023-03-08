@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.listView);
 
         // 3. Adapter <Type>
+<<<<<<< HEAD
 
         // Predefined adapter
 //        ArrayAdapter adapter = new ArrayAdapter(
@@ -45,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
                 this,
                 R.layout.my_list_item,
                 R.id.textView,
+=======
+        ArrayAdapter adapter = new ArrayAdapter(
+            this,
+                android.R.layout.simple_list_item_1,
+>>>>>>> 4c10056d69c090f4889fa016beadd2292a200a7a
                 worldCup22
         );
 
