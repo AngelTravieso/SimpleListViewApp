@@ -30,12 +30,15 @@ public class MainActivity extends AppCompatActivity {
         // inicializar widget
         listView = findViewById(R.id.listView);
 
-        // 3. Adapter
+        // 3. Adapter <Type>
         ArrayAdapter adapter = new ArrayAdapter(
-
+            this,
+                android.R.layout.simple_list_item_1,
+                worldCup22
         );
 
-
+        // Set adapter
+        listView.setAdapter(adapter);
 
     }
 }
