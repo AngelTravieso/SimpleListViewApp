@@ -25,17 +25,31 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R .layout.activity_main);
+        setContentView(R.layout.activity_main);
 
         // inicializar widget
         listView = findViewById(R.id.listView);
 
-        // 3. Adapter
-        ArrayAdapter adapter = new ArrayAdapter(
+        // 3. Adapter <Type>
 
+        // Predefined adapter
+//        ArrayAdapter adapter = new ArrayAdapter(
+//                this,
+//                // predefined list
+//                android.R.layout.simple_list_item_1,
+//                worldCup22
+//        );
+
+        // Custom adapter
+        ArrayAdapter adapter = new ArrayAdapter(
+                this,
+                R.layout.my_list_item,
+                R.id.textView,
+                worldCup22
         );
 
-
+        // Set adapter
+        listView.setAdapter(adapter);
 
     }
 }
